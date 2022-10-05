@@ -30,21 +30,33 @@
     </form>
   </div>
 
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBSEjfIg32YR9X0w8vdvmEJ8VkdqVS85Gk",
-      authDomain: "udemy-js-ab45b.firebaseapp.com",
-      databaseURL: "https://udemy-js-ab45b.firebaseio.com",
-      projectId: "udemy-js-ab45b",
-      storageBucket: "udemy-js-ab45b.appspot.com",
-      messagingSenderId: "307507834502"
+
+  <!-- ADD FIREBASE -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBPPp7fwhppPBTIl0JWCYQprnZIKIxZEaU",
+      authDomain: "udemy-modern-javascript-codex.firebaseapp.com",
+      projectId: "udemy-modern-javascript-codex",
+      storageBucket: "udemy-modern-javascript-codex.appspot.com",
+      messagingSenderId: "797698013143",
+      appId: "1:797698013143:web:ade661267f4bd0b502fd92",
+      measurementId: "G-FEBLS98RCK"
     };
-    firebase.initializeApp(config);
-    const db = firebase.firestore();  
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
+  <!-- MY SCRIPTS -->
   <script src="sandbox.js"></script>
 </body>
 </html>
+
